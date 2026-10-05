@@ -143,7 +143,7 @@
 **Root Cause Hypothesis:** The scan history query likely lacks a filter restricting results to the authenticated user's own ID — a missing authorization check (Broken Access Control)
 **Evidence:** Screenshot of scan history showing entries not created by the logged-in test account
 
-![BUG_07.png](BUG_07.png)
+![bug-07-scan-history.png](bug-07-scan-history.png)
 
 **Status:** Open — recommended for prompt attention given this is live and may expose sensitive data (scanned URLs, filenames, email content) across accounts
 
@@ -204,10 +204,10 @@
 **Root Cause Hypothesis:** Account creation likely succeeds server-side, but the confirmation response back to the frontend fails or times out, causing a false error to display
 **Evidence:** Screenshot of first-attempt error, 
 
-![BUG_10(1).png](BUG_10(1).png)
+![bug-10-signup-error-1.png](bug-10-signup-error-1.png)
 
 followed by second attempt "already registered" message
 
-![BUG_10(2).png](BUG_10(2).png)
+![bug-10-signup-error-2.png](bug-10-signup-error-2.png)
 
 Status: Open - misleads users into thinking signup failed when it actually succeeded
